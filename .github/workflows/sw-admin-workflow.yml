@@ -1,0 +1,11 @@
+name: SW-Admin Testing
+on: [pull_request] # TODO: Every commit to an "open" pr & creation of PR
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check if latest commit is tested
+      # Step 2.1: Block PR if not tested
+      # 2.2: Unblock PR if
+      - name: Check if tested
+        run: echo "Heeeey ${{github.actor }}"
