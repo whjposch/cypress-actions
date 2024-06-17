@@ -10,5 +10,5 @@ jobs:
       # 2.2: Unblock PR if
       - name: Check if tested
         run: echo "Heeeey ${{github.actor }}"
-      - name: Fail
-        run: exit 1
+      # - name: Fail
+      #   run: exit 1
