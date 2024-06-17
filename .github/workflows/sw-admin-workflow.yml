@@ -1,6 +1,7 @@
 name: SW-Admin Testing
 on:
   # pull_request:
+  # issue_comment: # TODO: manual trigger
   merge_group: # TODO: Every commit to an "open" pr & creation of PR
   workflow_dispatch:
     inputs:
@@ -8,6 +9,10 @@ on:
         description: 'The type of test'
         required: true
         default: 'full'
+        type: choice
+        options:
+          - full
+          - order
 jobs:
   block-if-not-tested:
     name: Block it not tested
