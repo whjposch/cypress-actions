@@ -1,7 +1,7 @@
 name: SW-Admin Testing
 on: [pull_request, merge_group] # TODO: Every commit to an "open" pr & creation of PR
 jobs:
-  build:
+  testing:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Check if latest commit is tested
