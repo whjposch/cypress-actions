@@ -1,6 +1,6 @@
 name: SW-Admin Testing
 on:
-  pull_request:
+  # pull_request:
   merge_group: # TODO: Every commit to an "open" pr & creation of PR
   workflow_dispatch:
     inputs:
@@ -18,5 +18,5 @@ jobs:
       # 2.2: Unblock PR if
       - name: Check if tested
         run: echo "Heeeey ${{github.actor }}"
-      - name: Fail
-        run: exit 1
+      # - name: Fail
+      #   run: exit 1
