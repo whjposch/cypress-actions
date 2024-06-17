@@ -1,0 +1,9 @@
+name: PR Block
+run-name: ${{ github.actor }} is testing
+on: [pull_request]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Heeeey ${{github.actor }}"
+  
