@@ -1,5 +1,13 @@
 name: SW-Admin Testing
-on: [pull_request, merge_group] # TODO: Every commit to an "open" pr & creation of PR
+on:
+  pull_request:
+  merge_group: # TODO: Every commit to an "open" pr & creation of PR
+  workflow_dispatch:
+    inputs:
+      testType:
+        description: 'The type of test'
+        required: true
+        default: 'full'
 jobs:
   block-if-not-tested:
     name: Block it not tested
