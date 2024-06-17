@@ -1,5 +1,5 @@
 name: SW-Admin Testing
-on: [pull_request] # TODO: Every commit to an "open" pr & creation of PR
+on: [pull_request, merge_group] # TODO: Every commit to an "open" pr & creation of PR
 jobs:
   build:
     runs-on: ubuntu-latest
