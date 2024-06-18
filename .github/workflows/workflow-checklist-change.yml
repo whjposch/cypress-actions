@@ -8,4 +8,7 @@ jobs:
     # TODO: Only if check changed
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Checkbox changed"
+      - name: Dump
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github.event) }}
+        run: echo "$GITHUB_CONTEXT"
