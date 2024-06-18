@@ -1,0 +1,12 @@
+name: Checklist status changed
+on:
+  issue_comment:
+    types: [edited]
+jobs:
+  pr_checklist_changed:
+    name: PR Checklist changed
+    # TODO: Only if check changed
+    if: ${{ github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Checkbox changed"

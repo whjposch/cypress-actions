@@ -1,11 +1,11 @@
-name: Block untested PR
+name: New PR opened
 on:
   pull_request:
-    types: [opened, synchronize, reopened] # TODO: Test if synchronize works
+    types: [opened, reopened]
     # TODO: We should not force tests for all commits, only specific changes
 jobs:
-  block-untested:
-    name: Block untested commits
+  new-pr-opened:
+    name: New PR opened
     if: github.base_ref == 'main' || github.base_ref == 'master'
     runs-on: ubuntu-latest
     steps:
