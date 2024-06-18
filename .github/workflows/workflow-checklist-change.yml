@@ -1,6 +1,6 @@
 name: Checklist status changed
 on:
-  pull_request:
+  issue_comment:
     types: [edited]
 jobs:
   pr_checklist_changed:
@@ -11,4 +11,5 @@ jobs:
       - name: Dump
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
-        run: echo "$GITHUB_CONTEXT"
+        run:
+          echo "${{github.event}}""
