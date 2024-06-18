@@ -7,8 +7,10 @@ jobs:
   block-untested-commit:
     name: Block untested commits
     runs-on: ubuntu-latest
+    if: github.head_ref == 'main'
     steps:
       - run: |
+          echo ${{ github.head_ref }}
           echo "Blocked PR"
           exit 1
       # Step 1: Checkout branch
