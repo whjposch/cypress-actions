@@ -14,7 +14,7 @@ jobs:
         with:
           checkbox_text: 'Run automatic test'
         env:
-          GITHUB_CONTEXT: ${{ toJson(github.event) }}
+          GITHUB_EVENT: ${{ toJson(github.event) }}
       - name: Should trigger
         if: ${{ steps.check-pr.outputs.shouldRun }}
         run: echo "Running"
