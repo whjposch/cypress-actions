@@ -1,0 +1,21 @@
+name: Block untested PR
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    # TODO: We should not force tests for all commits, only specific changes
+jobs:
+  block-untested-commit:
+    name: Block untested commits
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Blocked PR"
+          exit 1
+      - run:
+      # Step 1: Check if latest commit is tested
+      # Step 2.1: Block PR if not tested
+      # 2.2: Unblock PR if
+      - name: Check if tested
+        run: echo "Heeeey ${{github.actor }}"
+      # - name: Fail
+      #   run: exit 1

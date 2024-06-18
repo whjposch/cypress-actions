@@ -1,0 +1,6 @@
+jobs:
+  has-test-passed:
+   # 1. Obtain state for current commit
+   # 2. Check if test was succesfull
+   # 3.1. Success = Activate Merge
+   # 3.2. Failed = Block Merge
