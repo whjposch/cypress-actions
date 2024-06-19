@@ -6,6 +6,12 @@ jobs:
   pr_checklist_changed:
     name: PR Checklist changed
     # TODO: Only if check changed
+    # TODO: Custom action
+    # 1. Obtain event
+    # 2. Calculate changeSet
+    # 3. Check if requested checkbox has changed (available in changeset)
+    # 4. Set variable to be used for if check
+    # 5. Reset checkbox
     runs-on: ubuntu-latest
     steps:
       - name: Check comment for check

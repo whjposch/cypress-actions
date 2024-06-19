@@ -9,7 +9,17 @@ jobs:
     if: github.base_ref == 'main' || github.base_ref == 'master'
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - run: mkdir checks
+      - run: echo "test" >> checks/check-info.json
+      - name: Upload block file
+        uses: actions/upload-artifact@v4
+        with:
+          name: check-info.json
+          path: checks/check-info.json
+          retention-days: 1
+          overwrite: true
+      - name: Fail check
+        run: |
           echo "Disabled merging because the latest commit has not been automaticly tested yet"
           exit 1
       # Step 1: Checkout branch
