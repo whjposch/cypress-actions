@@ -12,8 +12,13 @@ jobs:
     # if: github.base_ref == 'main' || github.base_ref == 'master'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            cypress
       - run: |
           echo "Disabled merging because the latest commit has not been automaticly tested yet"
+          echo ls
           exit 1
       # Step 1: Checkout branch
       # Step 2: Calculate changeset and check if block should be triggered
