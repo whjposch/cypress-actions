@@ -18,7 +18,7 @@ jobs:
             cypress
       - run: |
           echo "Disabled merging because the latest commit has not been automaticly tested yet"
-          ls /
+          ls
       # Step 1: Checkout branch
       # Step 2: Calculate changeset and check if block should be triggered
       # Step 3.1: Block PR if not tested
